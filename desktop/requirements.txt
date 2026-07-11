@@ -1,0 +1,6 @@
+flask
+opencv-python
+pystray
+pillow
+pyopenssl
+pyinstaller

@@ -1,0 +1,24 @@
+<!--
+  After running `npx cap add android`, open:
+    android/app/src/main/AndroidManifest.xml
+
+  Add these permissions inside <manifest>, above <application>:
+-->
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<!--
+  Then, inside the <application> tag, add this attribute so cleartext
+  (non-HTTPS) local-network HTTP traffic to your laptop's IP is allowed
+  on Android 9+ (this app talks to a plain http:// server on your LAN,
+  not the public internet):
+
+    android:usesCleartextTraffic="true"
+
+  Example:
+    <application
+        android:usesCleartextTraffic="true"
+        ... >
+-->

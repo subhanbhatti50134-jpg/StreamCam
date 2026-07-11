@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>StreamCam</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Settings screen: shown until a server address is saved ── -->
+<div id="settings-screen" class="screen">
+  <div class="settings-card">
+    <div class="logo-row">
+      <div class="logo-dot"></div>
+      <h1>StreamCam</h1>
+    </div>
+    <p class="hint">Enter the address shown by the StreamCam tray app on your laptop.</p>
+
+    <label class="field-label">Laptop address</label>
+    <div class="input-row">
+      <span class="prefix">http://</span>
+      <input id="ip-input" type="text" inputmode="decimal" placeholder="192.168.1.42:8080" autocapitalize="off" autocorrect="off">
+    </div>
+
+    <button id="connect-btn" class="primary-btn">Connect</button>
+    <div id="settings-error" class="error-text"></div>
+  </div>
+</div>
+
+<!-- ── Live stream screen ── -->
+<div id="stream-screen" class="screen hidden">
+  <header>
+    <div class="logo-row">
+      <div class="logo-dot" id="conn-dot"></div>
+      <span id="conn-label">Connecting…</span>
+    </div>
+    <button id="settings-btn" class="icon-btn">⚙</button>
+  </header>
+
+  <div class="video-wrap">
+    <div class="video-shell">
+      <img id="stream" alt="Live feed">
+      <div class="overlay-tr" id="rec-indicator">
+        <div class="rec-dot"></div>
+        REC <span id="rec-timer">00:00</span>
+      </div>
+    </div>
+
+    <button id="rec-btn" class="rec-button">
+      <div class="btn-icon"></div>
+      <span id="btn-label">Start Recording</span>
+    </button>
+
+    <div class="info-card">
+      <div class="info-row"><span class="info-label">Server</span><span class="info-value" id="server-addr">—</span></div>
+      <div class="info-row"><span class="info-label">Chunks saved</span><span class="info-value" id="chunk-count">0</span></div>
+      <div class="info-row"><span class="info-label">Recorded size</span><span class="info-value" id="rec-size">0 KB</span></div>
+      <div id="log">Waiting to record…</div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
