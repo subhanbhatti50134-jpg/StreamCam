@@ -1,5 +1,7 @@
 # StreamCam — App Edition
 
+![Project banner for StreamCam](docs/images/streamcam-banner.png)
+
 Turns the original terminal-based StreamCam into:
 
 1. **`desktop/`** — a silent system tray app for your laptop. No terminal,
