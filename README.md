@@ -1,5 +1,7 @@
 # StreamCam — App Edition
 
+[![CI](https://github.com/subhanbhatti50134-jpg/StreamCam/actions/workflows/ci.yml/badge.svg)](https://github.com/subhanbhatti50134-jpg/StreamCam/actions/workflows/ci.yml)
+
 ![Project banner for StreamCam](docs/images/streamcam-banner.png)
 
 Turns the original terminal-based StreamCam into:
